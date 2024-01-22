@@ -1,1 +1,3 @@
-CREATE DATABASE pet_shop;
+USE chicken_coop;
+
+SELECT DATABASE();
