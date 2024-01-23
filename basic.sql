@@ -1,3 +1,1 @@
-USE chicken_coop;
-
-SELECT DATABASE();
+USE pet_shop;
