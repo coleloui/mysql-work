@@ -25,8 +25,8 @@
 -- DROP TABLE pastries;
 
 -- CREATE TABLE cats(
---     name VARCHAR(50),
---     age INT
+--     name VARCHAR(50) NOT NULL,
+--     age INT NOT NULL
 -- );
 
 -- INSERT INTO cats (name, age) VALUES ("Niko", 6);
@@ -37,17 +37,17 @@
 
 -- SELECT * FROM cats;
 
-CREATE TABLE people (
-    first_name VARCHAR(20),
-    last_name VARCHAR(20),
-    age INT
-);
+-- CREATE TABLE people (
+--     first_name VARCHAR(20),
+--     last_name VARCHAR(20),
+--     age INT
+-- );
 
-INSERT INTO people (first_name, last_name, age) VALUES ("Tina", "Blecher", 13);
-INSERT INTO people (first_name, last_name, age) VALUES ("Bob", "Blecher", 42);
+-- INSERT INTO people (first_name, last_name, age) VALUES ("Tina", "Blecher", 13);
+-- INSERT INTO people (first_name, last_name, age) VALUES ("Bob", "Blecher", 42);
 
-INSERT INTO people (first_name, last_name, age) VALUES ("Linda", "Blecher", 45), ("Phillip", "Frond", 38), ("Calvin", "Fischoeder", 70);
+-- INSERT INTO people (first_name, last_name, age) VALUES ("Linda", "Blecher", 45), ("Phillip", "Frond", 38), ("Calvin", "Fischoeder", 70);
 
-SELECT * FROM people;
+-- SELECT * FROM people;
 
-DROP TABLE people;
+-- DROP TABLE people;
