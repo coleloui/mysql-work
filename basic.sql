@@ -38,11 +38,15 @@
 -- SELECT * FROM cats;
 
 -- CREATE TABLE new_cats(
+--     cat_id INT AUTO_INCREMENT,
 --     name VARCHAR(20) NOT NULL DEFAULT 'unnamed',
---     age INT NOT NULL DEFAULT 0
+--     age INT NOT NULL DEFAULT 0,
+--     PRIMARY KEY(cat_id)
 -- );
 
--- INSERT INTO new_cats (age) VALUES (2);
+-- -- DESC new_cats;
+
+-- INSERT INTO new_cats (name, age) VALUES ('hootie', 2);
 -- SELECT * FROM new_cats;
 
 -- CREATE TABLE people (
