@@ -23,3 +23,15 @@
 -- DESC pastries;
 
 -- DROP TABLE pastries;
+
+CREATE TABLE cats(
+    name VARCHAR(50),
+    age INT
+);
+
+INSERT INTO cats (name, age) VALUES ("Niko", 6)
+
+INSERT INTO cats (name, age) VALUES("Bandit", 6);
+INSERT INTO cats (name, age) VALUES("Newt", 1);
+
+SELECT * FROM cats
