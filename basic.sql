@@ -29,9 +29,10 @@ CREATE TABLE cats(
     age INT
 );
 
-INSERT INTO cats (name, age) VALUES ("Niko", 6)
+-- INSERT INTO cats (name, age) VALUES ("Niko", 6);
+-- INSERT INTO cats (name, age) VALUES ("Bandit", 6);
+-- INSERT INTO cats (name, age) VALUES ("Newt", 1);
 
-INSERT INTO cats (name, age) VALUES("Bandit", 6);
-INSERT INTO cats (name, age) VALUES("Newt", 1);
+INSERT INTO cats (name, age) VALUES ("October", 2), ("June", 7), ("Meatball", 3);
 
-SELECT * FROM cats
+SELECT * FROM cats;
