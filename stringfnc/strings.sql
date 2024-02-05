@@ -13,3 +13,5 @@ FROM books;
 
 -- substring
 SELECT SUBSTRING('Hello World', 1, 5);
+
+SELECT CONCAT(SUBSTR(title, 1, 10), '...') FROM books;
