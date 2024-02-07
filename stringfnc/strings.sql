@@ -20,3 +20,7 @@ SELECT CONCAT(
         SUBSTR(author_fname, 1, 1), '. ', SUBSTR(author_lname, 1, 1), '.'
     ) AS author_initials
 FROM books;
+
+SELECT REPLACE ('hello world', 'hell', '%$#@');
+
+SELECT REPLACE ( 'cheese bread coffee milk', ' ', ' and ' );
