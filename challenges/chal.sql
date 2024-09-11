@@ -38,38 +38,71 @@
 
 -- SELECT * FROM cats;
 
-SELECT UPPER(
-        REVERSE(
-            'Why does my cat look at me with such hatred?'
-        )
-    );
+-- SELECT UPPER(
+--         REVERSE(
+--             'Why does my cat look at me with such hatred?'
+--         )
+--     );
 
-SELECT REPLACE (title, ' ', '->') AS title FROM books;
+-- SELECT REPLACE (title, ' ', '->') AS title FROM books;
+
+-- SELECT
+--     author_fname AS forwards,
+--     REVERSE(author_fname) AS backwards
+-- FROM books;
+
+-- SELECT UPPER(
+--         CONCAT(
+--             author_fname, ' ', author_lname
+--         )
+--     ) AS 'full name in caps'
+-- FROM books;
+
+-- SELECT CONCAT(
+--         title, ' was released in ', released_year
+--     ) as blurb
+-- from books;
+
+-- SELECT title, CHARACTER_LENGTH(title) as 'character count'
+-- from books;
+
+-- SELECT
+--     CONCAT(SUBSTR(title, 1, 10), '...') AS short_title,
+--     CONCAT(
+--         author_lname,
+--         ', ',
+--         author_fname
+--     ) as author,
+--     CONCAT(stock_quantity, ' in stock') as quantity
+-- FROM books;
+
+SELECT * FROM books WHERE title LIKE '%stories%';
+
+SELECT title, pages FROM books ORDER BY pages DESC LIMIT 1;
+
+SELECT CONCAT(title, ' - ', released_year) as summary
+FROM books
+ORDER BY released_year DESC
+LIMIT 3;
+
+SELECT title, author_lname FROM books WHERE author_lname LIKE '%\ %';
 
 SELECT
-    author_fname AS forwards,
-    REVERSE(author_fname) AS backwards
-FROM books;
+    title,
+    released_year,
+    stock_quantity
+FROM books
+ORDER BY stock_quantity, released_year DESC
+LIMIT 3;
+
+SELECT title, author_lname
+FROM books
+ORDER BY author_lname, title DESC;
 
 SELECT UPPER(
         CONCAT(
-            author_fname, ' ', author_lname
+            'my favorite author is ', author_fname, ' ', author_lname, '!'
         )
-    ) AS 'full name in caps'
-FROM books;
-
-SELECT CONCAT(
-        title, ' was released in ', released_year
-    ) as blurb
-from books;
-
-SELECT title, CHARACTER_LENGTH(title) as 'character count'
-from books;
-
-SELECT
-    CONCAT(SUBSTR(title, 1, 10), '...') AS short_title,
-    CONCAT(
-        author_lname, ', ', author_fname
-    ) as author,
-    CONCAT(stock_quantity, ' in stock') as quantity
-FROM books;
+    ) AS yell
+FROM books
+ORDER BY author_lname;
