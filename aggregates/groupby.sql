@@ -13,3 +13,25 @@ FROM books
 GROUP BY
     released_year
 ORDER BY count DESC;
+
+-- multiple columns
+SELECT author_lname, COUNT(*)
+FROM books
+GROUP BY
+    author_lname,
+    author_fname;
+
+SELECT CONCAT(
+        SUBSTR(author_fname, 1, 1), '. ', author_lname
+    ) as author, COUNT(*)
+FROM books
+GROUP BY
+    author_lname,
+    author_fname;
+
+SELECT CONCAT(
+        SUBSTR(author_fname, 1, 1), '. ', author_lname
+    ) as author, COUNT(*)
+FROM books
+GROUP BY
+    author;
