@@ -1,5 +1,5 @@
 # mysql-work
 
-udemy course
+-- udemy course
 
 im tracking work that i do
