@@ -18,3 +18,8 @@ SELECT released_year, AVG(stock_quantity)
 FROM books
 GROUP BY
     released_year;
+
+SELECT released_year, AVG(stock_quantity), COUNT(*)
+FROM books
+GROUP BY
+    released_year;
