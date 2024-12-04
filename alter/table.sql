@@ -10,3 +10,5 @@ SELECT * FROM companies;
 
 ALTER Table companies
 ADD COLUMN employee_count INT NOT NULL DEFAULT 1;
+
+ALTER Table companies DROP COLUMN phone;
