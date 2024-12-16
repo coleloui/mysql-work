@@ -25,3 +25,8 @@ MODIFY company_name VARCHAR(100) DEFAULT 'unknown';
 ALTER TABLE companies ADD COLUMN business VARCHAR(15);
 
 ALTER TABLE companies CHANGE business biz_name VARCHAR(50);
+
+ALTER TABLE houses
+ADD CONSTRAINT positive_pprice CHECK (purchase_price >= 0);
+
+ALTER TABLE houses DROP CONSTRAINT positive_pprice;
