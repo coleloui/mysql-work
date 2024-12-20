@@ -1,3 +1,7 @@
+CREATE DATABASE sales;
+
+USE sales;
+
 CREATE TABLE customers (
     id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(50),
