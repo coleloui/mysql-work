@@ -26,3 +26,13 @@ FROM customers
 GROUP BY
     first_name,
     last_name;
+
+select
+    first_name,
+    last_name,
+    IFNULL(SUM(amount), 0) as money_spent
+from customers
+    LEFT JOIN orders ON customers.id = orders.customer_id
+GROUP BY
+    first_name,
+    last_name;
